@@ -78,14 +78,107 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
         data['Age_of_House'] = current_year - data['YearBuilt']
         #Droping Year Bulit Column
         data.drop('YearBuilt',inplace=True,axis=1)
+        #Computing the years since the house was last modified
+        data['Age_of_Repair']=current_year - data['YearRemodAdd']
+        #Droping the YearRemodAdd
+        data.drop('YearRemodAdd',inplace=True,axis=1)
+        #ExterQual Mapping
+        extra_qual_mapping={
+            "Ex":5,
+            "Gd":4,
+            "TA":3,
+            "Fa":2,
+            "Po":1
+        }
+
+        #Mapping to ExterQual Mapping
+        data['ExterQual'].replace(extra_qual_mapping,inplace=True)
+        #Appling the same mapping to ExterCond
+        data['ExterCond'].replace(extra_qual_mapping,inplace=True)
+        #Mapping Height of Basement
+        base_height_map={
+            "Ex":5,
+            "Gd":4,
+            "TA":3,
+            "Fa":2,
+            "Po":1,
+            "NA":0
+        }
+        #Applying Mappaing to BsmtQual
+        data['BsmtQual'].replace(base_height_map,inplace=True)
+        #Applying Same Mapping to BsmtCond
+        data['BsmtCond'].replace(base_height_map,inplace=True)
+        #Mapping for BsmtExposure
+        bstm_mapping_exposure={
+            'Gd':5,
+            'Av':4,
+            'Mn':3,
+            'No':2,
+            'NA':1
+        }
+        #Applying the same Mapping to BsmtExposure
+        data['BsmtExposure'].replace(bstm_mapping_exposure,inplace=True)
+        #Mapping for BsmtFinType1
+        bstm_mapping_exposure_fin={
+            "GLQ":7,
+            "ALQ":6,
+            "BLQ":5,
+            "Rec":4,
+            "LwQ":3,
+            "Unf":2,
+            "NA":1
+        }
+        #Applying the same Mapping to BsmtFinType1
+        data['BsmtFinType1'].replace(bstm_mapping_exposure_fin,inplace=True)
+        #Droping BsmtFinType2 since already a 2 features related to same are there
+        data.drop(['BsmtFinType2'],axis=1,inplace=True)
+        #Droping 2nd Basement based_columns
+        list_of_basement_columns=['BsmtFinSF2']
+        data.drop(['BsmtFinSF2'],axis=1,inplace=True)
+        #Mapping HeatingQC
+        HeatingQC_mapping={
+            "Ex":5,
+            "Gd":4,
+            "TA":3,
+            "Fa":2,
+            "Po":1
+        }
+        #Applying the mapping HeatingQC
+        data['HeatingQC'].replace(HeatingQC_mapping,inplace=True)
+        #Mapping for CentralAir
+        mapping_ac={
+            "Y":1,
+            "N":0
+        }
+        #Applying the mapping
+        data['CentralAir'].replace(mapping_ac,inplace=True)
+
         #The distinct value in Utilities are --Remove in Prod
         print("The distinct value in Utilities are ",data['Utilities'].unique())
         #The distinct value in land slope are --Remove in Prod
         print("The distinct value in Land Slope are ",data['LandSlope'].unique())
         #The distinct value in OverallState --Remove in Prod
         print("The distinct value in OverallState are ",data['OverallState'].unique())
-        #The distinct value in age of House
+        #The distinct value in age of House --Remove in Prod
         print("The distinct value in age of House is ",data['Age_of_House'].unique())
+        #The distinct value in Age_of_Repair --Remove in Prod
+        print("The distinct value in Age_of_Repair is ",data['Age_of_Repair'].unique())
+        #The distinct value in ExtraQual Mapping --Remove in Prod
+        print("The distinct value in ExterQual  is ",data['ExterQual'].unique())
+        #The distinct value in ExtraCond Mapping is --Remove in Prod
+        print("The distinct value in ExterCond  is ",data['ExterCond'].unique())
+        #The distinct value in BsmtQual is --Remove in Prod
+        print("The distinct value in BsmtQual is ",data['BsmtQual'].unique())
+        #The distinct value in BsmtCond --Remove in Prod
+        print("The distinct value in BsmtCond is ",data['BsmtCond'].unique())
+        #The distinct value in BsmtExposure --Remove in Prod
+        print("The distinct value in BsmtExposure is ",data['BsmtExposure'].unique())
+        #The distinct value in BsmtFinType1 --Remove in Prod
+        print("The distinct value in BsmtFinType1 is ",data['BsmtFinType1'].unique())
+        #The distinct value in HeatingQC --Remove in Prod
+        print("The distinct value in HeatingQC is ",data['HeatingQC'].unique())
+        #The distinct value in CentralAir --Remove in Prod
+        print("The distinct value in CentralAir is ",data['CentralAir'].unique())
         #Check if any values are there --Remove it in Prod
         data_meta=pd.DataFrame(data.isnull().sum()/len(data)).reset_index().rename(columns={0:"Nulls"})
         data_meta=data_meta[data_meta['Nulls']>0]
