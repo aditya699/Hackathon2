@@ -152,7 +152,30 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
         }
         #Applying the mapping
         data['CentralAir'].replace(mapping_ac,inplace=True)
-
+        #KitchenQual mapping
+        kitchen_qual_mapping={
+            "Ex":5,
+            "Gd":4,
+            "TA":3,
+            "Fa":2,
+            "Po":1
+        }
+        #Kicthen Quality Mapping
+        data['KitchenQual'].replace(kitchen_qual_mapping,inplace=True)
+        #Functional Mapping
+        functional_mapping={
+            "Typ":8,
+            "Min1":7,
+            "Min2":6,
+            "Mod":5,
+            "Maj1":4,
+            "Maj2":3,
+            "Sev":2,
+            "Sal":1
+        }
+        #Applying the functional mapping
+        data['Functional'].replace(functional_mapping,inplace=True)
+        
         #The distinct value in Utilities are --Remove in Prod
         print("The distinct value in Utilities are ",data['Utilities'].unique())
         #The distinct value in land slope are --Remove in Prod
@@ -179,6 +202,10 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
         print("The distinct value in HeatingQC is ",data['HeatingQC'].unique())
         #The distinct value in CentralAir --Remove in Prod
         print("The distinct value in CentralAir is ",data['CentralAir'].unique())
+        #The distinct value in KitchenQual --Remove in Prod
+        print("The distinct value in KitchenQual is ",data['KitchenQual'].unique())
+        #The distinct value in functional are --Remove in Prod
+        print("The distinct value in functional are ",data['Functional'].unique())
         #Check if any values are there --Remove it in Prod
         data_meta=pd.DataFrame(data.isnull().sum()/len(data)).reset_index().rename(columns={0:"Nulls"})
         data_meta=data_meta[data_meta['Nulls']>0]
