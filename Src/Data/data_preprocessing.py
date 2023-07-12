@@ -24,7 +24,7 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
             data.isnull().sum()/len(data)).reset_index().rename(columns={0: "Nulls"})
         data_meta = data_meta[data_meta['Nulls'] >= 0.40]
         for i in data_meta['index']:
-            print("Will Drop",i)
+            print("Will Drop",i) ##Remove in Prod
             data.drop(i, inplace=True, axis=1)
         # Droping Condition 2 since already condition 1 is there which tell us about Proximity to various conditions
         data.drop('Condition2', inplace=True, axis=1)
@@ -177,9 +177,27 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
         #Applying the functional mapping
         data['Functional'].replace(functional_mapping,inplace=True)
         #Age of garbage
-        data['Age_of_Garbage']=current_year-data['GarageYrBlt']
+        data['Age_of_Garage']=current_year-data['GarageYrBlt']
         #Droping GarageYrBlt
         data.drop('GarageYrBlt',axis=1,inplace=True)
+        #Mapping for GarageFinish
+        map_for_garage_finish={
+            'Fin':4,
+            'RFn':3,
+            'Unf':2,
+            'NA':1
+        }
+        #Applying mapping in the same GarageFinish
+        data['GarageFinish'].replace(map_for_garage_finish,inplace=True)
+        #Applying mapping in Garage quality
+        data['GarageQual'].replace(base_height_map,inplace=True)
+        #Applying mapping in GarageCond
+        data['GarageCond'].replace(base_height_map,inplace=True)
+        #Computing an extra column age sold
+        data['Age_of_House_Sold']=current_year-data['YrSold']
+        #Droping the Yrsold columns
+        data.drop('YrSold',axis=1,inplace=True)
+
         #The distinct value in Utilities are --Remove in Prod
         print("The distinct value in Utilities are ",data['Utilities'].unique())
         #The distinct value in land slope are --Remove in Prod
@@ -210,8 +228,16 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
         print("The distinct value in KitchenQual is ",data['KitchenQual'].unique())
         #The distinct value in functional are --Remove in Prod
         print("The distinct value in functional are ",data['Functional'].unique())
-        #The distinct value in age of garage
-        print("The distinct value in age of garage ",data['Age_of_Garbage'].unique())
+        #The distinct value in age of garage --Remove in Prod
+        print("The distinct value in age of garage ",data['Age_of_Garage'].unique())
+        #The distinct value in GarageFinish --Remove in Prod
+        print("The distinct value in GarageFinish ",data['GarageFinish'].unique())
+        #The distinct value in Garage quality --Remove in Prod
+        print("The distinct value in GarageQuality ",data['GarageQual'].unique())
+        #The distinct value in GarageCond --Remove in Prod
+        print("The distinct value in GarageCond ",data['GarageCond'].unique())
+        #The distinct value in age of house sold --Remove in Prod
+        print("The distinct value in age of house sold ",data['Age_of_House_Sold'].unique())
         #Check if any values are there --Remove it in Prod
         data_meta=pd.DataFrame(data.isnull().sum()/len(data)).reset_index().rename(columns={0:"Nulls"})
         data_meta=data_meta[data_meta['Nulls']>0]
