@@ -3,9 +3,9 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 data = get_data("Data/Raw/train.csv")
+data_test = get_data("Data/Raw/test.csv")
 
-
-def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
+def preprocess_data(data: pd.DataFrame,data_test : pd.DataFrame)-> bool :
     '''
     The function will return the preprocessed data
     Input-
@@ -20,14 +20,18 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
         # Droping the same
         data = data.drop('Id', axis=1)
         # Droping Columns where % of nulls > 40 %
+        #Creating a list of columns to drop for test_data
+        list_of_columns_to_drop =[]
         data_meta = pd.DataFrame(
             data.isnull().sum()/len(data)).reset_index().rename(columns={0: "Nulls"})
         data_meta = data_meta[data_meta['Nulls'] >= 0.40]
         for i in data_meta['index']:
-            
-            data.drop(i, inplace=True, axis=1)
+            list_of_columns_to_drop.append (i)
+        data.drop(list_of_columns_to_drop, inplace=True, axis=1)
+        data_test.drop(list_of_columns_to_drop, inplace=True, axis=1)
         # Droping Condition 2 since already condition 1 is there which tell us about Proximity to various conditions
         data.drop('Condition2', inplace=True, axis=1)
+        data_test.drop('Condition2', inplace=True, axis=1)
         # Filling Missing Value's with mean for numerical and mode for categorical
         for i in data.columns:
             if data[i].dtype == "object" and data[i].isnull().sum() > 0:
@@ -36,6 +40,16 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
             if data[i].dtype == "float64" and data[i].isnull().sum() > 0:
                 mean = data[i].mean()
                 data[i].fillna(mean, inplace=True)
+
+        for i in data_test.columns:
+            if data_test[i].dtype == "object" and data_test[i].isnull().sum() > 0:
+                mode = data_test[i].mode()[0]
+                data_test[i].fillna(mode, inplace=True)
+            if data_test[i].dtype == "float64" and data_test[i].isnull().sum() > 0:
+                mean = data_test[i].mean()
+                data_test[i].fillna(mean, inplace=True)
+
+        
         #Utilities modelling
 
         utilities_mapping={
@@ -45,6 +59,7 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
             "ELO":1
         }
         data['Utilities'].replace(utilities_mapping,inplace=True)
+        data_test['Utilities'].replace(utilities_mapping,inplace=True)
         #LandSlope Modelling
         landslope_modelling ={
             "Gtl":0,
@@ -52,6 +67,7 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
              "Sev":2
         }
         data['LandSlope'].replace(landslope_modelling,inplace=True)
+        data_test['LandSlope'].replace(landslope_modelling,inplace=True)
         #OverallQual Modelling
         rating_overall_qual = {
             'Very Excellent': 10,
@@ -68,21 +84,32 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
 
 
         data['OverallQual'].replace(rating_overall_qual,inplace=True)
+        data_test['OverallQual'].replace(rating_overall_qual,inplace=True)
         #OverallCond Modelling (Will use the same Previous Dictionary)
         data['OverallCond'].replace(rating_overall_qual,inplace=True)
+        data_test['OverallCond'].replace(rating_overall_qual,inplace=True)
         #Creating a new column as overall state
         data['OverallState']=(data['OverallQual']+data['OverallCond'])//2
+        data_test['OverallState']=(data_test['OverallQual']+data_test['OverallCond'])//2
         #Droping OverallQual and QverallCond
         data.drop(['OverallQual','OverallCond'],inplace=True,axis=1)
+        data_test.drop(['OverallQual','OverallCond'],inplace=True,axis=1)
+        
         #Computing age of house  using YearBuilt: Original construction date
         current_year = datetime.now().year
         data['Age_of_House'] = current_year - data['YearBuilt']
+        data_test['Age_of_House']=current_year - data_test['YearBuilt']
         #Droping Year Bulit Column
         data.drop('YearBuilt',inplace=True,axis=1)
+        data_test.drop('YearBuilt',inplace=True,axis=1)
         #Computing the years since the house was last modified
         data['Age_of_Repair']=current_year - data['YearRemodAdd']
+        data_test['Age_of_Repair']=current_year - data_test['YearRemodAdd']
+        
         #Droping the YearRemodAdd
         data.drop('YearRemodAdd',inplace=True,axis=1)
+        data_test.drop('YearRemodAdd',inplace=True,axis=1)
+        
         #ExterQual Mapping
         extra_qual_mapping={
             "Ex":5,
@@ -94,8 +121,12 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
 
         #Mapping to ExterQual Mapping
         data['ExterQual'].replace(extra_qual_mapping,inplace=True)
+        data_test['ExterQual'].replace(extra_qual_mapping,inplace=True)
+        
         #Appling the same mapping to ExterCond
         data['ExterCond'].replace(extra_qual_mapping,inplace=True)
+        data_test['ExterCond'].replace(extra_qual_mapping,inplace=True)
+        
         #Mapping Height of Basement
         base_height_map={
             "Ex":5,
@@ -107,8 +138,10 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
         }
         #Applying Mappaing to BsmtQual
         data['BsmtQual'].replace(base_height_map,inplace=True)
+        data_test['BsmtQual'].replace(base_height_map,inplace=True)
         #Applying Same Mapping to BsmtCond
         data['BsmtCond'].replace(base_height_map,inplace=True)
+        data_test['BsmtCond'].replace(base_height_map,inplace=True)
         #Mapping for BsmtExposure
         bstm_mapping_exposure={
             'Gd':5,
@@ -119,6 +152,7 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
         }
         #Applying the same Mapping to BsmtExposure
         data['BsmtExposure'].replace(bstm_mapping_exposure,inplace=True)
+        data_test['BsmtExposure'].replace(bstm_mapping_exposure,inplace=True)
         #Mapping for BsmtFinType1
         bstm_mapping_exposure_fin={
             "GLQ":7,
@@ -131,11 +165,16 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
         }
         #Applying the same Mapping to BsmtFinType1
         data['BsmtFinType1'].replace(bstm_mapping_exposure_fin,inplace=True)
+        data_test['BsmtFinType1'].replace(bstm_mapping_exposure_fin,inplace=True)
+        
         #Droping BsmtFinType2 since already a 2 features related to same are there
         data.drop(['BsmtFinType2'],axis=1,inplace=True)
+        data_test.drop(['BsmtFinType2'],axis=1,inplace=True)
         #Droping 2nd Basement based_columns
-        list_of_basement_columns=['BsmtFinSF2']
+        
         data.drop(['BsmtFinSF2'],axis=1,inplace=True)
+        data_test.drop(['BsmtFinSF2'],axis=1,inplace=True)
+        
         #Mapping HeatingQC
         HeatingQC_mapping={
             "Ex":5,
@@ -146,6 +185,8 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
         }
         #Applying the mapping HeatingQC
         data['HeatingQC'].replace(HeatingQC_mapping,inplace=True)
+        data_test['HeatingQC'].replace(HeatingQC_mapping,inplace=True)
+        
         #Mapping for CentralAir
         mapping_ac={
             "Y":1,
@@ -153,6 +194,8 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
         }
         #Applying the mapping
         data['CentralAir'].replace(mapping_ac,inplace=True)
+        data_test['CentralAir'].replace(mapping_ac,inplace=True)
+        
         #KitchenQual mapping
         kitchen_qual_mapping={
             "Ex":5,
@@ -163,6 +206,7 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
         }
         #Kicthen Quality Mapping
         data['KitchenQual'].replace(kitchen_qual_mapping,inplace=True)
+        data_test['KitchenQual'].replace(kitchen_qual_mapping,inplace=True)
         #Functional Mapping
         functional_mapping={
             "Typ":8,
@@ -176,10 +220,16 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
         }
         #Applying the functional mapping
         data['Functional'].replace(functional_mapping,inplace=True)
+        data_test['Functional'].replace(functional_mapping,inplace=True)
+        
         #Age of garbage
         data['Age_of_Garage']=current_year-data['GarageYrBlt']
+        data_test['Age_of_Garage']=current_year-data_test['GarageYrBlt']
+        
         #Droping GarageYrBlt
         data.drop('GarageYrBlt',axis=1,inplace=True)
+        data_test.drop('GarageYrBlt',axis=1,inplace=True)
+        
         #Mapping for GarageFinish
         map_for_garage_finish={
             'Fin':4,
@@ -189,16 +239,26 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
         }
         #Applying mapping in the same GarageFinish
         data['GarageFinish'].replace(map_for_garage_finish,inplace=True)
+        data_test['GarageFinish'].replace(map_for_garage_finish,inplace=True)
+        
         #Applying mapping in Garage quality
         data['GarageQual'].replace(base_height_map,inplace=True)
+        data_test['GarageQual'].replace(base_height_map,inplace=True)
+        
         #Applying mapping in GarageCond
         data['GarageCond'].replace(base_height_map,inplace=True)
+        data_test['GarageCond'].replace(base_height_map,inplace=True)
         #Computing an extra column age sold
         data['Age_of_House_Sold']=current_year-data['YrSold']
+        data_test['Age_of_House_Sold']=current_year-data['YrSold']
         #Droping the Yrsold columns
         data.drop('YrSold',axis=1,inplace=True)
-        return data.to_csv("Data/Processed/train_cleaned.csv",index=False)
+        data_test.drop('YrSold',axis=1,inplace=True)
+        data.to_csv("Data/Processed/train_cleaned.csv",index=False)
+        data_test.to_csv("Data/Processed/test_cleaned.csv",index=False)
+        return True
     except Exception as e:
         return e
     
-preprocess_data(data)
+#Calling the above create function
+preprocess_data(data,data_test)
