@@ -24,7 +24,7 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
             data.isnull().sum()/len(data)).reset_index().rename(columns={0: "Nulls"})
         data_meta = data_meta[data_meta['Nulls'] >= 0.40]
         for i in data_meta['index']:
-            print("Will Drop",i) ##Remove in Prod
+            
             data.drop(i, inplace=True, axis=1)
         # Droping Condition 2 since already condition 1 is there which tell us about Proximity to various conditions
         data.drop('Condition2', inplace=True, axis=1)
@@ -197,55 +197,8 @@ def preprocess_data(data: pd.DataFrame)->pd.DataFrame:
         data['Age_of_House_Sold']=current_year-data['YrSold']
         #Droping the Yrsold columns
         data.drop('YrSold',axis=1,inplace=True)
-
-        #The distinct value in Utilities are --Remove in Prod
-        print("The distinct value in Utilities are ",data['Utilities'].unique())
-        #The distinct value in land slope are --Remove in Prod
-        print("The distinct value in Land Slope are ",data['LandSlope'].unique())
-        #The distinct value in OverallState --Remove in Prod
-        print("The distinct value in OverallState are ",data['OverallState'].unique())
-        #The distinct value in age of House --Remove in Prod
-        print("The distinct value in age of House is ",data['Age_of_House'].unique())
-        #The distinct value in Age_of_Repair --Remove in Prod
-        print("The distinct value in Age_of_Repair is ",data['Age_of_Repair'].unique())
-        #The distinct value in ExtraQual Mapping --Remove in Prod
-        print("The distinct value in ExterQual  is ",data['ExterQual'].unique())
-        #The distinct value in ExtraCond Mapping is --Remove in Prod
-        print("The distinct value in ExterCond  is ",data['ExterCond'].unique())
-        #The distinct value in BsmtQual is --Remove in Prod
-        print("The distinct value in BsmtQual is ",data['BsmtQual'].unique())
-        #The distinct value in BsmtCond --Remove in Prod
-        print("The distinct value in BsmtCond is ",data['BsmtCond'].unique())
-        #The distinct value in BsmtExposure --Remove in Prod
-        print("The distinct value in BsmtExposure is ",data['BsmtExposure'].unique())
-        #The distinct value in BsmtFinType1 --Remove in Prod
-        print("The distinct value in BsmtFinType1 is ",data['BsmtFinType1'].unique())
-        #The distinct value in HeatingQC --Remove in Prod
-        print("The distinct value in HeatingQC is ",data['HeatingQC'].unique())
-        #The distinct value in CentralAir --Remove in Prod
-        print("The distinct value in CentralAir is ",data['CentralAir'].unique())
-        #The distinct value in KitchenQual --Remove in Prod
-        print("The distinct value in KitchenQual is ",data['KitchenQual'].unique())
-        #The distinct value in functional are --Remove in Prod
-        print("The distinct value in functional are ",data['Functional'].unique())
-        #The distinct value in age of garage --Remove in Prod
-        print("The distinct value in age of garage ",data['Age_of_Garage'].unique())
-        #The distinct value in GarageFinish --Remove in Prod
-        print("The distinct value in GarageFinish ",data['GarageFinish'].unique())
-        #The distinct value in Garage quality --Remove in Prod
-        print("The distinct value in GarageQuality ",data['GarageQual'].unique())
-        #The distinct value in GarageCond --Remove in Prod
-        print("The distinct value in GarageCond ",data['GarageCond'].unique())
-        #The distinct value in age of house sold --Remove in Prod
-        print("The distinct value in age of house sold ",data['Age_of_House_Sold'].unique())
-        #Check if any values are there --Remove it in Prod
-        data_meta=pd.DataFrame(data.isnull().sum()/len(data)).reset_index().rename(columns={0:"Nulls"})
-        data_meta=data_meta[data_meta['Nulls']>0]
-        if len(data_meta)==0: print("No Nulls found in data")
-        #Check what is the shape of the data --Remove it in Prod
-        print("The shape of data is ",data.shape)
-        return data
+        return data.to_csv("Data/Processed/train_cleaned.csv",index=False)
     except Exception as e:
         return e
     
-print(preprocess_data(data))
+preprocess_data(data)
