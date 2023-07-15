@@ -1,21 +1,29 @@
-from kafka import KafkaProducer
+from confluent_kafka import Producer
+import csv
 
 # Kafka producer configuration
-bootstrap_servers = 'localhost:9092'
-topic = 'house_price'
+producer_config = {
+    'bootstrap.servers': 'localhost:9092',
+    'client.id': 'my-client-id'
+}
 
-# Create a Kafka producer instance
-producer = KafkaProducer(bootstrap_servers=bootstrap_servers)
+def publish_csv_to_kafka(file_path, topic):
+    producer = Producer(producer_config)
 
-# Path to your CSV file
-csv_file = 'Data/Processed/train_cleaned.csv'
+    with open(file_path, 'r') as file:
+        csv_reader = csv.reader(file)
+        header = next(csv_reader)  # Read the header line
 
-# Read the CSV file and push each line as a message to the Kafka topic
-with open(csv_file, 'r') as file:
-    for line in file:
-        # Encode the message as bytes before sending
-        message = line.encode('utf-8')
-        producer.send(topic, value=message)
+        for row in csv_reader:
+            # Convert the row to a string
+            data = ','.join(row)
+            
+            # Publish the data to the Kafka topic
+            producer.produce(topic, value=data)
 
-# Close the Kafka producer
-producer.close()
+    producer.flush()
+
+# Usage example
+file_path = "Data/Processed/train_cleaned.csv"
+topic = "mytopic"
+publish_csv_to_kafka(file_path, topic)
