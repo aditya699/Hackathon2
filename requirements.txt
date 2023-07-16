@@ -1,0 +1,5 @@
+pyspark
+confluent-kafka
+pandas 
+numpy
+pycaret
