@@ -7,7 +7,7 @@ def predict_output(filepath_train:str,filepath_test:str) -> pd.DataFrame :
         data_train=get_data(filepath_train)
         data_test=get_data(filepath_test)
         s = setup(data_train, target = 'SalePrice', session_id = 123)
-        best = compare_models()
+        best = compare_models(include=['gbr','et','rf'])
         predictions = predict_model(best, data=data_test)
         predictions=pd.DataFrame(predictions)
         return predictions.to_csv("Data/Predictions/output.csv",index=False)
