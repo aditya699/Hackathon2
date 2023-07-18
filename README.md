@@ -57,8 +57,11 @@ As we get a file for testing we can simply keep the file in place of test.csv in
 # How to run it?
 
 1.Download the file.
+
 2.Create a new environment with python 3.8
+
 3.Run pip install -r requirements.txt
+
 4.Then you can play will the application
 
 (Note -The docker image is created looking to save it tar format , due to size and compute constraints not pushing to dockerhub yet)
@@ -80,16 +83,6 @@ As we get a file for testing we can simply keep the file in place of test.csv in
 5.Dockerization: The project incorporates Docker to containerize the application, making it easier to deploy and run consistently across different environments. Dockerization simplifies the setup process and reduces compatibility issues.
 
 6.Version Control: Although not explicitly mentioned, it is recommended to use version control, such as Git, to manage the source code and track changes. Version control enables collaboration, allows for easy rollback, and provides a history of the project's development.
-
-
-
-
-
-
-
-
-
-
 
 ## 🚀 About Me
 A motivated Data Scientist with a proven track record of success in leveraging data analytics and business insights to drive strategic decisions. Experienced in developing and implementing data-driven strategies that maximize ROI. Skilled in using advanced analytics to identify opportunities for growth and efficiency. Currently working as a Business Analyst at NeenOpal, formerly a Data Scientist at Ineuron.ai & Analytics Vidhya, and an alumnus of IIIT Hyderabad & Delhi University.
