@@ -64,10 +64,7 @@ As we get a file for testing we can simply keep the file in place of test.csv in
 
 4.Then you can play will the application
 
-=>Docker image 
-
-Link to Docker Image -
-https://drive.google.com/file/d/1h86zn6Mo7a6mNr4e__DkGGk9XHoneNhc/view?usp=sharing
+(Note -The docker image is created looking to save it tar format , due to size and compute constraints not pushing to dockerhub yet)
 
 # Retraining
 
