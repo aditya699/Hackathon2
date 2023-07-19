@@ -84,9 +84,26 @@ Link to Docker Image - https://drive.google.com/file/d/1h86zn6Mo7a6mNr4e__DkGGk9
 
 6.Version Control: Although not explicitly mentioned, it is recommended to use version control, such as Git, to manage the source code and track changes. Version control enables collaboration, allows for easy rollback, and provides a history of the project's development.
 
-## 🚀 About Me
-A motivated Data Scientist with a proven track record of success in leveraging data analytics and business insights to drive strategic decisions. Experienced in developing and implementing data-driven strategies that maximize ROI. Skilled in using advanced analytics to identify opportunities for growth and efficiency. Currently working as a Business Analyst at NeenOpal, formerly a Data Scientist at Ineuron.ai & Analytics Vidhya, and an alumnus of IIIT Hyderabad & Delhi University.
-
 # Accuracy 
 
 The model upon running gives an accuracy of about 83-85%
+
+# Explainable AI
+
+1.Model interpretation
+
+2.Feature Importance
+
+3.UI Based Output
+
+UI
+![UI](https://github.com/aditya699/ZAMATO-DATA-SCIENCE-PROJECT/assets/64576351/26f42a84-300d-4c04-bc90-a5c4f05b778d)
+
+4.Pipeline Visualization
+
+
+
+ 
+## 🚀 About Me
+A motivated Data Scientist with a proven track record of success in leveraging data analytics and business insights to drive strategic decisions. Experienced in developing and implementing data-driven strategies that maximize ROI. Skilled in using advanced analytics to identify opportunities for growth and efficiency. Currently working as a Business Analyst at NeenOpal, formerly a Data Scientist at Ineuron.ai & Analytics Vidhya, and an alumnus of IIIT Hyderabad & Delhi University.
+

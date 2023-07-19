@@ -10093,3 +10093,1311 @@ Alternately, you can install this by running `pip install pycaret[models]`
 2023-07-17 06:41:53,015:INFO:Preloading libraries
 2023-07-17 06:41:53,016:INFO:Set up data.
 2023-07-17 06:41:53,081:INFO:Set up index.
+2023-07-19 07:20:21,261:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-19 07:20:21,263:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-19 07:20:21,263:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-19 07:20:21,263:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-19 07:30:28,797:INFO:PyCaret RegressionExperiment
+2023-07-19 07:30:28,816:INFO:Logging name: reg-default-name
+2023-07-19 07:30:28,817:INFO:ML Usecase: MLUsecase.REGRESSION
+2023-07-19 07:30:28,818:INFO:version 3.0.4
+2023-07-19 07:30:28,818:INFO:Initializing setup()
+2023-07-19 07:30:28,818:INFO:self.USI: a40c
+2023-07-19 07:30:28,833:INFO:self._variable_keys: {'X_train', 'n_jobs_param', 'exp_name_log', 'USI', 'gpu_param', 'X_test', 'X', 'log_plots_param', 'seed', 'y_test', 'exp_id', 'transform_target_param', 'html_param', 'fold_generator', '_available_plots', '_ml_usecase', 'fold_groups_param', 'target_param', 'fold_shuffle_param', 'gpu_n_jobs_param', 'data', 'idx', 'y', 'memory', 'y_train', 'logging_param', 'pipeline'}
+2023-07-19 07:30:28,851:INFO:Checking environment
+2023-07-19 07:30:28,888:INFO:python_version: 3.8.17
+2023-07-19 07:30:28,888:INFO:python_build: ('default', 'Jul  5 2023 20:44:21')
+2023-07-19 07:30:28,917:INFO:machine: AMD64
+2023-07-19 07:30:28,980:INFO:platform: Windows-10-10.0.19045-SP0
+2023-07-19 07:30:29,216:INFO:Memory: svmem(total=8345964544, available=1230864384, percent=85.3, used=7115100160, free=1230864384)
+2023-07-19 07:30:29,228:INFO:Physical Core: 4
+2023-07-19 07:30:29,229:INFO:Logical Core: 8
+2023-07-19 07:30:29,246:INFO:Checking libraries
+2023-07-19 07:30:29,289:INFO:System:
+2023-07-19 07:30:29,290:INFO:    python: 3.8.17 (default, Jul  5 2023, 20:44:21) [MSC v.1916 64 bit (AMD64)]
+2023-07-19 07:30:29,290:INFO:executable: c:\Users\aditya\anaconda3\envs\hack2\python.exe
+2023-07-19 07:30:29,290:INFO:   machine: Windows-10-10.0.19045-SP0
+2023-07-19 07:30:29,290:INFO:PyCaret required dependencies:
+2023-07-19 07:30:34,830:INFO:                 pip: 23.1.2
+2023-07-19 07:30:34,831:INFO:          setuptools: 67.8.0
+2023-07-19 07:30:34,831:INFO:             pycaret: 3.0.4
+2023-07-19 07:30:34,831:INFO:             IPython: 8.12.2
+2023-07-19 07:30:34,831:INFO:          ipywidgets: 8.0.7
+2023-07-19 07:30:34,831:INFO:                tqdm: 4.65.0
+2023-07-19 07:30:34,831:INFO:               numpy: 1.23.5
+2023-07-19 07:30:34,831:INFO:              pandas: 1.5.3
+2023-07-19 07:30:34,832:INFO:              jinja2: 3.1.2
+2023-07-19 07:30:34,832:INFO:               scipy: 1.10.1
+2023-07-19 07:30:34,832:INFO:              joblib: 1.3.1
+2023-07-19 07:30:34,832:INFO:             sklearn: 1.2.2
+2023-07-19 07:30:34,832:INFO:                pyod: 1.1.0
+2023-07-19 07:30:34,832:INFO:            imblearn: 0.11.0
+2023-07-19 07:30:34,832:INFO:   category_encoders: 2.6.1
+2023-07-19 07:30:34,833:INFO:            lightgbm: 4.0.0
+2023-07-19 07:30:34,833:INFO:               numba: 0.57.1
+2023-07-19 07:30:34,833:INFO:            requests: 2.31.0
+2023-07-19 07:30:34,833:INFO:          matplotlib: 3.7.2
+2023-07-19 07:30:34,833:INFO:          scikitplot: 0.3.7
+2023-07-19 07:30:34,833:INFO:         yellowbrick: 1.5
+2023-07-19 07:30:34,833:INFO:              plotly: 5.15.0
+2023-07-19 07:30:34,833:INFO:    plotly-resampler: Not installed
+2023-07-19 07:30:34,834:INFO:             kaleido: 0.2.1
+2023-07-19 07:30:34,834:INFO:           schemdraw: 0.15
+2023-07-19 07:30:34,834:INFO:         statsmodels: 0.14.0
+2023-07-19 07:30:34,834:INFO:              sktime: 0.20.1
+2023-07-19 07:30:34,834:INFO:               tbats: 1.1.3
+2023-07-19 07:30:34,834:INFO:            pmdarima: 2.0.3
+2023-07-19 07:30:34,834:INFO:              psutil: 5.9.5
+2023-07-19 07:30:34,834:INFO:          markupsafe: 2.1.3
+2023-07-19 07:30:34,834:INFO:             pickle5: Not installed
+2023-07-19 07:30:34,835:INFO:         cloudpickle: 2.2.1
+2023-07-19 07:30:34,835:INFO:         deprecation: 2.1.0
+2023-07-19 07:30:34,835:INFO:              xxhash: 3.2.0
+2023-07-19 07:30:34,835:INFO:           wurlitzer: Not installed
+2023-07-19 07:30:34,835:INFO:PyCaret optional dependencies:
+2023-07-19 07:30:34,900:INFO:                shap: Not installed
+2023-07-19 07:30:34,900:INFO:           interpret: Not installed
+2023-07-19 07:30:34,901:INFO:                umap: Not installed
+2023-07-19 07:30:34,901:INFO:    pandas_profiling: Not installed
+2023-07-19 07:30:34,901:INFO:  explainerdashboard: Not installed
+2023-07-19 07:30:34,901:INFO:             autoviz: Not installed
+2023-07-19 07:30:34,901:INFO:           fairlearn: Not installed
+2023-07-19 07:30:34,901:INFO:          deepchecks: Not installed
+2023-07-19 07:30:34,901:INFO:             xgboost: Not installed
+2023-07-19 07:30:34,902:INFO:            catboost: Not installed
+2023-07-19 07:30:34,902:INFO:              kmodes: Not installed
+2023-07-19 07:30:34,902:INFO:             mlxtend: Not installed
+2023-07-19 07:30:34,902:INFO:       statsforecast: Not installed
+2023-07-19 07:30:34,902:INFO:        tune_sklearn: Not installed
+2023-07-19 07:30:34,902:INFO:                 ray: Not installed
+2023-07-19 07:30:34,902:INFO:            hyperopt: Not installed
+2023-07-19 07:30:34,902:INFO:              optuna: Not installed
+2023-07-19 07:30:34,902:INFO:               skopt: Not installed
+2023-07-19 07:30:34,903:INFO:              mlflow: Not installed
+2023-07-19 07:30:34,903:INFO:              gradio: Not installed
+2023-07-19 07:30:34,903:INFO:             fastapi: Not installed
+2023-07-19 07:30:34,903:INFO:             uvicorn: Not installed
+2023-07-19 07:30:34,903:INFO:              m2cgen: Not installed
+2023-07-19 07:30:34,903:INFO:           evidently: Not installed
+2023-07-19 07:30:34,903:INFO:               fugue: Not installed
+2023-07-19 07:30:34,903:INFO:           streamlit: Not installed
+2023-07-19 07:30:34,904:INFO:             prophet: Not installed
+2023-07-19 07:30:34,904:INFO:None
+2023-07-19 07:30:34,948:INFO:Set up data.
+2023-07-19 07:30:36,496:INFO:Set up train/test split.
+2023-07-19 07:30:36,948:INFO:Set up index.
+2023-07-19 07:30:36,950:INFO:Set up folding strategy.
+2023-07-19 07:30:36,952:INFO:Assigning column types.
+2023-07-19 07:30:37,062:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2023-07-19 07:30:37,119:INFO:Engine for model 'lasso' has not been set explicitly, hence returning None.
+2023-07-19 07:30:37,145:INFO:Engine for model 'ridge' has not been set explicitly, hence returning None.
+2023-07-19 07:30:37,187:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2023-07-19 07:30:37,571:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:30:37,719:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-07-19 07:30:37,779:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:37,809:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:37,812:INFO:Engine for model 'lasso' has not been set explicitly, hence returning None.
+2023-07-19 07:30:37,822:INFO:Engine for model 'ridge' has not been set explicitly, hence returning None.
+2023-07-19 07:30:37,835:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2023-07-19 07:30:38,007:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:30:38,127:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-07-19 07:30:38,128:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:38,128:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:38,129:INFO:Engine successfully changes for model 'lasso' to 'sklearn'.
+2023-07-19 07:30:38,139:INFO:Engine for model 'ridge' has not been set explicitly, hence returning None.
+2023-07-19 07:30:38,151:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2023-07-19 07:30:38,310:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:30:38,428:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-07-19 07:30:38,430:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:38,431:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:38,447:INFO:Engine for model 'ridge' has not been set explicitly, hence returning None.
+2023-07-19 07:30:38,462:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2023-07-19 07:30:38,615:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:30:38,720:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-07-19 07:30:38,721:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:38,722:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:38,722:INFO:Engine successfully changes for model 'ridge' to 'sklearn'.
+2023-07-19 07:30:38,745:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2023-07-19 07:30:38,878:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:30:39,020:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-07-19 07:30:39,021:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:39,022:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:39,052:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2023-07-19 07:30:39,215:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:30:39,343:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-07-19 07:30:39,344:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:39,345:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:39,345:INFO:Engine successfully changes for model 'en' to 'sklearn'.
+2023-07-19 07:30:39,503:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:30:39,624:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-07-19 07:30:39,627:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:39,628:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:39,839:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:30:39,956:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-07-19 07:30:39,958:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:39,959:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:39,960:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2023-07-19 07:30:40,132:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:30:40,234:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:40,234:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:40,399:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:30:40,513:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:40,514:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:40,514:INFO:Engine successfully changes for model 'svm' to 'sklearn'.
+2023-07-19 07:30:40,808:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:40,809:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:41,117:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:41,118:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:41,987:INFO:Preparing preprocessing pipeline...
+2023-07-19 07:30:41,988:INFO:Set up simple imputation.
+2023-07-19 07:30:42,112:INFO:Set up encoding of ordinal features.
+2023-07-19 07:30:42,142:INFO:Set up encoding of categorical features.
+2023-07-19 07:30:44,530:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:231: UserWarning: Persisting input arguments took 0.93s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  fitted_transformer = self._memory_fit(
+
+2023-07-19 07:30:46,426:INFO:Finished creating preprocessing pipeline.
+2023-07-19 07:30:46,543:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\aditya\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['MSSubClass', 'Utilities',
+                                             'LandSlope', 'MasVnrArea',
+                                             'ExterQual', 'ExterCond',
+                                             'TotalBsmtSF', 'CentralAir',
+                                             '1stFlrSF', '2ndFlrSF',
+                                             'LowQualFinSF', 'GrLivArea',
+                                             'BsmtFullBath', 'BsmtHalfBath',
+                                             'FullBath', 'HalfBath',
+                                             'BedroomAbvGr...
+                                             'BldgType', 'RoofStyle',
+                                             'Exterior1st', 'Foundation',
+                                             'Heating', 'Electrical',
+                                             'PavedDrive', 'SaleType',
+                                             'SaleCondition'],
+                                    transformer=OneHotEncoder(cols=['MSZoning',
+                                                                    'LandContour',
+                                                                    'Neighborhood',
+                                                                    'Condition1',
+                                                                    'BldgType',
+                                                                    'RoofStyle',
+                                                                    'Exterior1st',
+                                                                    'Foundation',
+                                                                    'Heating',
+                                                                    'Electrical',
+                                                                    'PavedDrive',
+                                                                    'SaleType',
+                                                                    'SaleCondition'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True)))])
+2023-07-19 07:30:46,543:INFO:Creating final display dataframe.
+2023-07-19 07:30:49,164:INFO:Setup _display_container:                     Description             Value
+0                    Session id               123
+1                        Target         SalePrice
+2                   Target type        Regression
+3           Original data shape        (1459, 53)
+4        Transformed data shape       (1459, 140)
+5   Transformed train set shape       (1021, 140)
+6    Transformed test set shape        (438, 140)
+7              Ordinal features                 1
+8              Numeric features                38
+9          Categorical features                14
+10     Rows with missing values            100.0%
+11                   Preprocess              True
+12              Imputation type            simple
+13           Numeric imputation              mean
+14       Categorical imputation              mode
+15     Maximum one-hot encoding                25
+16              Encoding method              None
+17               Fold Generator             KFold
+18                  Fold Number                10
+19                     CPU Jobs                -1
+20                      Use GPU             False
+21               Log Experiment             False
+22              Experiment Name  reg-default-name
+23                          USI              a40c
+2023-07-19 07:30:51,014:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:51,015:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:51,815:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:51,833:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:30:52,129:INFO:setup() successfully completed in 34.7s...............
+2023-07-19 07:33:52,843:INFO:Initializing compare_models()
+2023-07-19 07:33:52,844:INFO:compare_models(self=<pycaret.regression.oop.RegressionExperiment object at 0x000002AD09EE2DC0>, include=['gbr', 'et', 'rf'], fold=None, round=4, cross_validation=True, sort=R2, n_select=1, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.regression.oop.RegressionExperiment object at 0x000002AD09EE2DC0>, 'include': ['gbr', 'et', 'rf'], 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'R2', 'n_select': 1, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.regression.oop.RegressionExperiment'>}, exclude=None)
+2023-07-19 07:33:52,844:INFO:Checking exceptions
+2023-07-19 07:33:52,893:INFO:Preparing display monitor
+2023-07-19 07:33:54,681:INFO:Initializing Gradient Boosting Regressor
+2023-07-19 07:33:54,684:INFO:Total runtime is 0.00041884581247965494 minutes
+2023-07-19 07:33:54,715:INFO:SubProcess create_model() called ==================================
+2023-07-19 07:33:54,828:INFO:Initializing create_model()
+2023-07-19 07:33:54,829:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000002AD09EE2DC0>, estimator=gbr, fold=KFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000002AD31040730>, model_only=True, return_train_score=False, kwargs={})
+2023-07-19 07:33:54,830:INFO:Checking exceptions
+2023-07-19 07:33:54,831:INFO:Importing libraries
+2023-07-19 07:33:54,831:INFO:Copying training dataset
+2023-07-19 07:33:54,873:INFO:Defining folds
+2023-07-19 07:33:54,873:INFO:Declaring metric variables
+2023-07-19 07:33:54,894:INFO:Importing untrained model
+2023-07-19 07:33:54,958:INFO:Gradient Boosting Regressor Imported successfully
+2023-07-19 07:33:55,036:INFO:Starting cross validation
+2023-07-19 07:33:56,042:INFO:Cross validating with KFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-07-19 07:34:45,298:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:231: UserWarning: Persisting input arguments took 0.89s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  fitted_transformer = self._memory_fit(
+
+2023-07-19 07:34:46,489:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.83s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:34:46,588:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 0.89s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-07-19 07:34:46,893:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 0.82s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-07-19 07:34:47,019:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 0.99s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-07-19 07:34:47,561:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 0.82s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-07-19 07:34:48,546:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 2.43s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:34:48,726:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.64s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:34:49,368:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.78s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:34:49,512:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 2.02s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:34:49,787:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 2.24s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:34:50,070:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.98s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:34:50,257:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.88s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:34:55,265:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.39s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:34:57,152:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 0.97s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:03,917:INFO:Calculating mean and std
+2023-07-19 07:35:03,961:INFO:Creating metrics dataframe
+2023-07-19 07:35:05,961:INFO:Uploading results into container
+2023-07-19 07:35:05,968:INFO:Uploading model into container now
+2023-07-19 07:35:05,996:INFO:_master_model_container: 1
+2023-07-19 07:35:05,997:INFO:_display_container: 2
+2023-07-19 07:35:05,999:INFO:GradientBoostingRegressor(random_state=123)
+2023-07-19 07:35:06,026:INFO:create_model() successfully completed......................................
+2023-07-19 07:35:24,045:INFO:SubProcess create_model() end ==================================
+2023-07-19 07:35:24,046:INFO:Creating metrics dataframe
+2023-07-19 07:35:24,104:INFO:Initializing Extra Trees Regressor
+2023-07-19 07:35:24,106:INFO:Total runtime is 1.4907960216204326 minutes
+2023-07-19 07:35:24,131:INFO:SubProcess create_model() called ==================================
+2023-07-19 07:35:24,134:INFO:Initializing create_model()
+2023-07-19 07:35:24,135:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000002AD09EE2DC0>, estimator=et, fold=KFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000002AD31040730>, model_only=True, return_train_score=False, kwargs={})
+2023-07-19 07:35:24,136:INFO:Checking exceptions
+2023-07-19 07:35:24,136:INFO:Importing libraries
+2023-07-19 07:35:24,137:INFO:Copying training dataset
+2023-07-19 07:35:24,182:INFO:Defining folds
+2023-07-19 07:35:24,183:INFO:Declaring metric variables
+2023-07-19 07:35:24,207:INFO:Importing untrained model
+2023-07-19 07:35:24,238:INFO:Extra Trees Regressor Imported successfully
+2023-07-19 07:35:24,315:INFO:Starting cross validation
+2023-07-19 07:35:24,340:INFO:Cross validating with KFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-07-19 07:35:29,054:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 1.34s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-07-19 07:35:29,099:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 1.04s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-07-19 07:35:29,196:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 1.23s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-07-19 07:35:29,227:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 1.20s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-07-19 07:35:29,315:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 1.04s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-07-19 07:35:29,426:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 0.95s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-07-19 07:35:29,525:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 0.92s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-07-19 07:35:29,541:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 1.06s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-07-19 07:35:30,090:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 0.68s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-07-19 07:35:31,044:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.60s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:31,155:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.49s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:31,281:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.56s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:31,366:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.61s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:31,829:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 2.12s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:32,161:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 2.02s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:32,185:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 2.13s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:32,427:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.94s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:38,647:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 0.93s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:38,838:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 0.92s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:47,020:INFO:Calculating mean and std
+2023-07-19 07:35:47,025:INFO:Creating metrics dataframe
+2023-07-19 07:35:49,048:INFO:Uploading results into container
+2023-07-19 07:35:49,054:INFO:Uploading model into container now
+2023-07-19 07:35:49,058:INFO:_master_model_container: 2
+2023-07-19 07:35:49,058:INFO:_display_container: 2
+2023-07-19 07:35:49,062:INFO:ExtraTreesRegressor(n_jobs=-1, random_state=123)
+2023-07-19 07:35:49,062:INFO:create_model() successfully completed......................................
+2023-07-19 07:35:49,404:INFO:SubProcess create_model() end ==================================
+2023-07-19 07:35:49,404:INFO:Creating metrics dataframe
+2023-07-19 07:35:49,483:INFO:Initializing Random Forest Regressor
+2023-07-19 07:35:49,485:INFO:Total runtime is 1.9137823899586996 minutes
+2023-07-19 07:35:49,516:INFO:SubProcess create_model() called ==================================
+2023-07-19 07:35:49,520:INFO:Initializing create_model()
+2023-07-19 07:35:49,522:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000002AD09EE2DC0>, estimator=rf, fold=KFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000002AD31040730>, model_only=True, return_train_score=False, kwargs={})
+2023-07-19 07:35:49,522:INFO:Checking exceptions
+2023-07-19 07:35:49,523:INFO:Importing libraries
+2023-07-19 07:35:49,523:INFO:Copying training dataset
+2023-07-19 07:35:49,580:INFO:Defining folds
+2023-07-19 07:35:49,581:INFO:Declaring metric variables
+2023-07-19 07:35:49,627:INFO:Importing untrained model
+2023-07-19 07:35:49,671:INFO:Random Forest Regressor Imported successfully
+2023-07-19 07:35:49,763:INFO:Starting cross validation
+2023-07-19 07:35:49,793:INFO:Cross validating with KFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-07-19 07:35:51,667:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:238: UserWarning: Persisting input arguments took 0.69s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = self._memory_transform(
+
+2023-07-19 07:35:54,163:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 0.73s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-07-19 07:35:54,955:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:108: UserWarning: Persisting input arguments took 0.75s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = pipeline._memory_transform(transformer, X, y)
+
+2023-07-19 07:35:55,022:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.54s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:55,555:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.71s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:55,735:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 2.13s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:56,026:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 2.08s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:56,207:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.81s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:56,270:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.86s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:57,019:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 2.05s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:35:57,151:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.84s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:36:03,815:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.11s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:36:04,250:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.15s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2023-07-19 07:36:16,713:INFO:Calculating mean and std
+2023-07-19 07:36:16,724:INFO:Creating metrics dataframe
+2023-07-19 07:36:19,006:INFO:Uploading results into container
+2023-07-19 07:36:19,010:INFO:Uploading model into container now
+2023-07-19 07:36:19,013:INFO:_master_model_container: 3
+2023-07-19 07:36:19,013:INFO:_display_container: 2
+2023-07-19 07:36:19,015:INFO:RandomForestRegressor(n_jobs=-1, random_state=123)
+2023-07-19 07:36:19,016:INFO:create_model() successfully completed......................................
+2023-07-19 07:36:19,329:INFO:SubProcess create_model() end ==================================
+2023-07-19 07:36:19,332:INFO:Creating metrics dataframe
+2023-07-19 07:36:19,520:INFO:Initializing create_model()
+2023-07-19 07:36:19,522:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000002AD09EE2DC0>, estimator=GradientBoostingRegressor(random_state=123), fold=KFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2023-07-19 07:36:19,524:INFO:Checking exceptions
+2023-07-19 07:36:19,543:INFO:Importing libraries
+2023-07-19 07:36:19,544:INFO:Copying training dataset
+2023-07-19 07:36:19,616:INFO:Defining folds
+2023-07-19 07:36:19,618:INFO:Declaring metric variables
+2023-07-19 07:36:19,625:INFO:Importing untrained model
+2023-07-19 07:36:19,627:INFO:Declaring custom model
+2023-07-19 07:36:19,634:INFO:Gradient Boosting Regressor Imported successfully
+2023-07-19 07:36:19,671:INFO:Cross validation set to False
+2023-07-19 07:36:19,672:INFO:Fitting Model
+2023-07-19 07:36:22,540:INFO:GradientBoostingRegressor(random_state=123)
+2023-07-19 07:36:22,541:INFO:create_model() successfully completed......................................
+2023-07-19 07:36:22,996:INFO:_master_model_container: 3
+2023-07-19 07:36:22,997:INFO:_display_container: 2
+2023-07-19 07:36:22,999:INFO:GradientBoostingRegressor(random_state=123)
+2023-07-19 07:36:23,000:INFO:compare_models() successfully completed......................................
+2023-07-19 07:36:52,978:INFO:Initializing plot_model()
+2023-07-19 07:36:52,979:INFO:plot_model(plot=residuals, fold=None, verbose=True, display=None, display_format=None, estimator=GradientBoostingRegressor(random_state=123), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x000002AD09EE2DC0>, system=True)
+2023-07-19 07:36:52,980:INFO:Checking exceptions
+2023-07-19 07:36:53,024:INFO:Preloading libraries
+2023-07-19 07:36:53,124:INFO:Copying training dataset
+2023-07-19 07:36:53,125:INFO:Plot type: residuals
+2023-07-19 07:36:56,440:INFO:Fitting Model
+2023-07-19 07:36:56,467:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but GradientBoostingRegressor was fitted with feature names
+  warnings.warn(
+
+2023-07-19 07:36:57,213:INFO:Scoring test/hold-out set
+2023-07-19 07:37:01,868:INFO:Visual Rendered Successfully
+2023-07-19 07:37:02,269:INFO:plot_model() successfully completed......................................
+2023-07-19 07:37:44,647:INFO:Initializing plot_model()
+2023-07-19 07:37:44,649:INFO:plot_model(plot=error, fold=None, verbose=True, display=None, display_format=None, estimator=GradientBoostingRegressor(random_state=123), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x000002AD09EE2DC0>, system=True)
+2023-07-19 07:37:44,649:INFO:Checking exceptions
+2023-07-19 07:37:44,693:INFO:Preloading libraries
+2023-07-19 07:37:44,782:INFO:Copying training dataset
+2023-07-19 07:37:44,782:INFO:Plot type: error
+2023-07-19 07:37:46,523:INFO:Fitting Model
+2023-07-19 07:37:46,526:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but GradientBoostingRegressor was fitted with feature names
+  warnings.warn(
+
+2023-07-19 07:37:46,527:INFO:Scoring test/hold-out set
+2023-07-19 07:37:48,379:INFO:Visual Rendered Successfully
+2023-07-19 07:37:48,720:INFO:plot_model() successfully completed......................................
+2023-07-19 07:38:23,573:INFO:Initializing plot_model()
+2023-07-19 07:38:23,575:INFO:plot_model(plot=feature, fold=None, verbose=True, display=None, display_format=None, estimator=GradientBoostingRegressor(random_state=123), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x000002AD09EE2DC0>, system=True)
+2023-07-19 07:38:23,576:INFO:Checking exceptions
+2023-07-19 07:38:23,642:INFO:Preloading libraries
+2023-07-19 07:38:23,745:INFO:Copying training dataset
+2023-07-19 07:38:23,746:INFO:Plot type: feature
+2023-07-19 07:38:23,750:WARNING:No coef_ found. Trying feature_importances_
+2023-07-19 07:38:25,905:INFO:Visual Rendered Successfully
+2023-07-19 07:38:26,332:INFO:plot_model() successfully completed......................................
+2023-07-19 07:40:02,566:INFO:Initializing save_model()
+2023-07-19 07:40:02,567:INFO:save_model(model=GradientBoostingRegressor(random_state=123), model_name=my_model_pipeline, prep_pipe_=Pipeline(memory=FastMemory(location=C:\Users\aditya\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['MSSubClass', 'Utilities',
+                                             'LandSlope', 'MasVnrArea',
+                                             'ExterQual', 'ExterCond',
+                                             'TotalBsmtSF', 'CentralAir',
+                                             '1stFlrSF', '2ndFlrSF',
+                                             'LowQualFinSF', 'GrLivArea',
+                                             'BsmtFullBath', 'BsmtHalfBath',
+                                             'FullBath', 'HalfBath',
+                                             'BedroomAbvGr...
+                                             'BldgType', 'RoofStyle',
+                                             'Exterior1st', 'Foundation',
+                                             'Heating', 'Electrical',
+                                             'PavedDrive', 'SaleType',
+                                             'SaleCondition'],
+                                    transformer=OneHotEncoder(cols=['MSZoning',
+                                                                    'LandContour',
+                                                                    'Neighborhood',
+                                                                    'Condition1',
+                                                                    'BldgType',
+                                                                    'RoofStyle',
+                                                                    'Exterior1st',
+                                                                    'Foundation',
+                                                                    'Heating',
+                                                                    'Electrical',
+                                                                    'PavedDrive',
+                                                                    'SaleType',
+                                                                    'SaleCondition'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True)))]), verbose=True, use_case=MLUsecase.REGRESSION, kwargs={})
+2023-07-19 07:40:02,568:INFO:Adding model into prep_pipe
+2023-07-19 07:40:03,050:INFO:my_model_pipeline.pkl saved in current working directory
+2023-07-19 07:40:03,325:INFO:Pipeline(memory=FastMemory(location=C:\Users\aditya\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['MSSubClass', 'Utilities',
+                                             'LandSlope', 'MasVnrArea',
+                                             'ExterQual', 'ExterCond',
+                                             'TotalBsmtSF', 'CentralAir',
+                                             '1stFlrSF', '2ndFlrSF',
+                                             'LowQualFinSF', 'GrLivArea',
+                                             'BsmtFullBath', 'BsmtHalfBath',
+                                             'FullBath', 'HalfBath',
+                                             'BedroomAbvGr...
+                                             'PavedDrive', 'SaleType',
+                                             'SaleCondition'],
+                                    transformer=OneHotEncoder(cols=['MSZoning',
+                                                                    'LandContour',
+                                                                    'Neighborhood',
+                                                                    'Condition1',
+                                                                    'BldgType',
+                                                                    'RoofStyle',
+                                                                    'Exterior1st',
+                                                                    'Foundation',
+                                                                    'Heating',
+                                                                    'Electrical',
+                                                                    'PavedDrive',
+                                                                    'SaleType',
+                                                                    'SaleCondition'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('trained_model', GradientBoostingRegressor(random_state=123))])
+2023-07-19 07:40:03,327:INFO:save_model() successfully completed......................................
+2023-07-19 07:40:28,007:INFO:Initializing load_model()
+2023-07-19 07:40:28,008:INFO:load_model(model_name=my_first_pipeline, platform=None, authentication=None, verbose=True)
+2023-07-19 07:40:41,310:INFO:Initializing load_model()
+2023-07-19 07:40:41,310:INFO:load_model(model_name=my_model_pipeline, platform=None, authentication=None, verbose=True)
+2023-07-19 07:42:15,795:INFO:Initializing interpret_model()
+2023-07-19 07:42:15,796:INFO:interpret_model(estimator=GradientBoostingRegressor(random_state=123), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=None, kwargs={}, observation=None, plot=summary, save=False, self=<pycaret.regression.oop.RegressionExperiment object at 0x000002AD09EE2DC0>)
+2023-07-19 07:42:15,796:INFO:Checking exceptions
+2023-07-19 07:42:15,797:ERROR:
+'shap' is a soft dependency and not included in the pycaret installation. Please run: `pip install shap` to install.
+Alternately, you can install this by running `pip install pycaret[analysis]`
+NoneType: None
+2023-07-19 07:43:26,795:INFO:Initializing interpret_model()
+2023-07-19 07:43:26,796:INFO:interpret_model(estimator=GradientBoostingRegressor(random_state=123), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=None, kwargs={}, observation=None, plot=summary, save=False, self=<pycaret.regression.oop.RegressionExperiment object at 0x000002AD09EE2DC0>)
+2023-07-19 07:43:26,797:INFO:Checking exceptions
+2023-07-19 07:43:26,797:ERROR:
+'shap' is a soft dependency and not included in the pycaret installation. Please run: `pip install shap` to install.
+Alternately, you can install this by running `pip install pycaret[analysis]`
+NoneType: None
+2023-07-19 07:43:38,947:INFO:Initializing interpret_model()
+2023-07-19 07:43:38,948:INFO:interpret_model(estimator=GradientBoostingRegressor(random_state=123), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=None, kwargs={}, observation=None, plot=summary, save=False, self=<pycaret.regression.oop.RegressionExperiment object at 0x000002AD09EE2DC0>)
+2023-07-19 07:43:38,948:INFO:Checking exceptions
+2023-07-19 07:43:38,949:ERROR:
+'shap' is a soft dependency and not included in the pycaret installation. Please run: `pip install shap` to install.
+Alternately, you can install this by running `pip install pycaret[analysis]`
+NoneType: None
+2023-07-19 07:44:19,575:INFO:Initializing interpret_model()
+2023-07-19 07:44:19,577:INFO:interpret_model(estimator=GradientBoostingRegressor(random_state=123), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=None, kwargs={}, observation=None, plot=summary, save=False, self=<pycaret.regression.oop.RegressionExperiment object at 0x000002AD09EE2DC0>)
+2023-07-19 07:44:19,578:INFO:Checking exceptions
+2023-07-19 07:44:19,578:ERROR:
+'shap' is a soft dependency and not included in the pycaret installation. Please run: `pip install shap` to install.
+Alternately, you can install this by running `pip install pycaret[analysis]`
+NoneType: None
+2023-07-19 07:45:46,531:ERROR:
+'gradio' is a soft dependency and not included in the pycaret installation. Please run: `pip install gradio` to install.
+Alternately, you can install this by running `pip install pycaret[mlops]`
+NoneType: None
+2023-07-19 07:47:38,043:ERROR:
+'gradio' is a soft dependency and not included in the pycaret installation. Please run: `pip install gradio` to install.
+Alternately, you can install this by running `pip install pycaret[mlops]`
+NoneType: None
+2023-07-19 07:48:39,644:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-19 07:48:39,645:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-19 07:48:39,646:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-19 07:48:39,646:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-19 07:48:45,344:INFO:PyCaret RegressionExperiment
+2023-07-19 07:48:45,346:INFO:Logging name: reg-default-name
+2023-07-19 07:48:45,347:INFO:ML Usecase: MLUsecase.REGRESSION
+2023-07-19 07:48:45,347:INFO:version 3.0.4
+2023-07-19 07:48:45,351:INFO:Initializing setup()
+2023-07-19 07:48:45,360:INFO:self.USI: c410
+2023-07-19 07:48:45,360:INFO:self._variable_keys: {'X_test', 'n_jobs_param', 'gpu_n_jobs_param', 'seed', 'fold_groups_param', 'X_train', 'USI', 'gpu_param', '_available_plots', 'log_plots_param', 'y', '_ml_usecase', 'transform_target_param', 'target_param', 'idx', 'memory', 'pipeline', 'logging_param', 'y_train', 'X', 'y_test', 'html_param', 'fold_generator', 'exp_id', 'data', 'exp_name_log', 'fold_shuffle_param'}
+2023-07-19 07:48:45,360:INFO:Checking environment
+2023-07-19 07:48:45,361:INFO:python_version: 3.8.17
+2023-07-19 07:48:45,361:INFO:python_build: ('default', 'Jul  5 2023 20:44:21')
+2023-07-19 07:48:45,361:INFO:machine: AMD64
+2023-07-19 07:48:45,361:INFO:platform: Windows-10-10.0.19045-SP0
+2023-07-19 07:48:45,381:INFO:Memory: svmem(total=8345964544, available=547610624, percent=93.4, used=7798353920, free=547610624)
+2023-07-19 07:48:45,382:INFO:Physical Core: 4
+2023-07-19 07:48:45,382:INFO:Logical Core: 8
+2023-07-19 07:48:45,382:INFO:Checking libraries
+2023-07-19 07:48:45,383:INFO:System:
+2023-07-19 07:48:45,384:INFO:    python: 3.8.17 (default, Jul  5 2023, 20:44:21) [MSC v.1916 64 bit (AMD64)]
+2023-07-19 07:48:45,384:INFO:executable: c:\Users\aditya\anaconda3\envs\hack2\python.exe
+2023-07-19 07:48:45,385:INFO:   machine: Windows-10-10.0.19045-SP0
+2023-07-19 07:48:45,385:INFO:PyCaret required dependencies:
+2023-07-19 07:48:46,010:INFO:                 pip: 23.1.2
+2023-07-19 07:48:46,011:INFO:          setuptools: 67.8.0
+2023-07-19 07:48:46,012:INFO:             pycaret: 3.0.4
+2023-07-19 07:48:46,012:INFO:             IPython: 8.12.2
+2023-07-19 07:48:46,013:INFO:          ipywidgets: 8.0.7
+2023-07-19 07:48:46,013:INFO:                tqdm: 4.65.0
+2023-07-19 07:48:46,013:INFO:               numpy: 1.23.5
+2023-07-19 07:48:46,014:INFO:              pandas: 1.5.3
+2023-07-19 07:48:46,014:INFO:              jinja2: 3.1.2
+2023-07-19 07:48:46,014:INFO:               scipy: 1.10.1
+2023-07-19 07:48:46,015:INFO:              joblib: 1.3.1
+2023-07-19 07:48:46,015:INFO:             sklearn: 1.2.2
+2023-07-19 07:48:46,015:INFO:                pyod: 1.1.0
+2023-07-19 07:48:46,016:INFO:            imblearn: 0.11.0
+2023-07-19 07:48:46,016:INFO:   category_encoders: 2.6.1
+2023-07-19 07:48:46,017:INFO:            lightgbm: 4.0.0
+2023-07-19 07:48:46,017:INFO:               numba: 0.57.1
+2023-07-19 07:48:46,017:INFO:            requests: 2.31.0
+2023-07-19 07:48:46,017:INFO:          matplotlib: 3.7.2
+2023-07-19 07:48:46,018:INFO:          scikitplot: 0.3.7
+2023-07-19 07:48:46,018:INFO:         yellowbrick: 1.5
+2023-07-19 07:48:46,018:INFO:              plotly: 5.15.0
+2023-07-19 07:48:46,019:INFO:    plotly-resampler: Not installed
+2023-07-19 07:48:46,019:INFO:             kaleido: 0.2.1
+2023-07-19 07:48:46,019:INFO:           schemdraw: 0.15
+2023-07-19 07:48:46,019:INFO:         statsmodels: 0.14.0
+2023-07-19 07:48:46,020:INFO:              sktime: 0.20.1
+2023-07-19 07:48:46,020:INFO:               tbats: 1.1.3
+2023-07-19 07:48:46,021:INFO:            pmdarima: 2.0.3
+2023-07-19 07:48:46,021:INFO:              psutil: 5.9.5
+2023-07-19 07:48:46,021:INFO:          markupsafe: 2.1.3
+2023-07-19 07:48:46,021:INFO:             pickle5: Not installed
+2023-07-19 07:48:46,022:INFO:         cloudpickle: 2.2.1
+2023-07-19 07:48:46,022:INFO:         deprecation: 2.1.0
+2023-07-19 07:48:46,022:INFO:              xxhash: 3.2.0
+2023-07-19 07:48:46,023:INFO:           wurlitzer: Not installed
+2023-07-19 07:48:46,023:INFO:PyCaret optional dependencies:
+2023-07-19 07:49:14,876:INFO:                shap: 0.42.1
+2023-07-19 07:49:14,878:INFO:           interpret: Not installed
+2023-07-19 07:49:14,879:INFO:                umap: Not installed
+2023-07-19 07:49:14,880:INFO:    pandas_profiling: Not installed
+2023-07-19 07:49:14,881:INFO:  explainerdashboard: Not installed
+2023-07-19 07:49:14,881:INFO:             autoviz: Not installed
+2023-07-19 07:49:14,882:INFO:           fairlearn: Not installed
+2023-07-19 07:49:14,882:INFO:          deepchecks: Not installed
+2023-07-19 07:49:14,884:INFO:             xgboost: Not installed
+2023-07-19 07:49:14,884:INFO:            catboost: Not installed
+2023-07-19 07:49:14,884:INFO:              kmodes: Not installed
+2023-07-19 07:49:14,884:INFO:             mlxtend: Not installed
+2023-07-19 07:49:14,885:INFO:       statsforecast: Not installed
+2023-07-19 07:49:14,885:INFO:        tune_sklearn: Not installed
+2023-07-19 07:49:14,885:INFO:                 ray: Not installed
+2023-07-19 07:49:14,886:INFO:            hyperopt: Not installed
+2023-07-19 07:49:14,886:INFO:              optuna: Not installed
+2023-07-19 07:49:14,887:INFO:               skopt: Not installed
+2023-07-19 07:49:14,887:INFO:              mlflow: Not installed
+2023-07-19 07:49:14,887:INFO:              gradio: 3.37.0
+2023-07-19 07:49:14,888:INFO:             fastapi: 0.100.0
+2023-07-19 07:49:14,888:INFO:             uvicorn: 0.23.1
+2023-07-19 07:49:14,889:INFO:              m2cgen: Not installed
+2023-07-19 07:49:14,889:INFO:           evidently: Not installed
+2023-07-19 07:49:14,890:INFO:               fugue: Not installed
+2023-07-19 07:49:14,891:INFO:           streamlit: Not installed
+2023-07-19 07:49:14,893:INFO:             prophet: Not installed
+2023-07-19 07:49:14,894:INFO:None
+2023-07-19 07:49:14,895:INFO:Set up data.
+2023-07-19 07:49:15,117:INFO:Set up train/test split.
+2023-07-19 07:49:15,200:INFO:Set up index.
+2023-07-19 07:49:15,201:INFO:Set up folding strategy.
+2023-07-19 07:49:15,202:INFO:Assigning column types.
+2023-07-19 07:49:15,244:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2023-07-19 07:49:15,245:INFO:Engine for model 'lasso' has not been set explicitly, hence returning None.
+2023-07-19 07:49:15,288:INFO:Engine for model 'ridge' has not been set explicitly, hence returning None.
+2023-07-19 07:49:15,332:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2023-07-19 07:49:15,718:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:49:15,995:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-07-19 07:49:15,998:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:16,001:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:16,003:INFO:Engine for model 'lasso' has not been set explicitly, hence returning None.
+2023-07-19 07:49:16,048:INFO:Engine for model 'ridge' has not been set explicitly, hence returning None.
+2023-07-19 07:49:16,078:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2023-07-19 07:49:16,480:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:49:16,885:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-07-19 07:49:16,888:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:16,891:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:16,895:INFO:Engine successfully changes for model 'lasso' to 'sklearn'.
+2023-07-19 07:49:16,930:INFO:Engine for model 'ridge' has not been set explicitly, hence returning None.
+2023-07-19 07:49:16,963:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2023-07-19 07:49:17,387:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:49:17,631:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-07-19 07:49:17,635:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:17,636:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:17,659:INFO:Engine for model 'ridge' has not been set explicitly, hence returning None.
+2023-07-19 07:49:17,681:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2023-07-19 07:49:18,007:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:49:18,278:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-07-19 07:49:18,282:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:18,283:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:18,285:INFO:Engine successfully changes for model 'ridge' to 'sklearn'.
+2023-07-19 07:49:18,338:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2023-07-19 07:49:18,697:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:49:18,932:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-07-19 07:49:18,934:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:18,935:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:19,002:INFO:Engine for model 'en' has not been set explicitly, hence returning None.
+2023-07-19 07:49:19,350:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:49:19,616:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-07-19 07:49:19,620:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:19,621:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:19,624:INFO:Engine successfully changes for model 'en' to 'sklearn'.
+2023-07-19 07:49:20,184:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:49:20,544:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-07-19 07:49:20,548:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:20,550:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:20,964:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:49:21,316:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2023-07-19 07:49:21,320:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:21,326:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:21,330:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2023-07-19 07:49:21,962:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:49:22,341:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:22,344:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:22,808:INFO:Engine for model 'svm' has not been set explicitly, hence returning None.
+2023-07-19 07:49:23,148:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:23,149:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:23,150:INFO:Engine successfully changes for model 'svm' to 'sklearn'.
+2023-07-19 07:49:23,897:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:23,898:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:24,530:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:24,531:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:24,539:INFO:Preparing preprocessing pipeline...
+2023-07-19 07:49:24,540:INFO:Set up simple imputation.
+2023-07-19 07:49:24,564:INFO:Set up encoding of ordinal features.
+2023-07-19 07:49:24,572:INFO:Set up encoding of categorical features.
+2023-07-19 07:49:25,229:INFO:Finished creating preprocessing pipeline.
+2023-07-19 07:49:25,378:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\aditya\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['MSSubClass', 'Utilities',
+                                             'LandSlope', 'MasVnrArea',
+                                             'ExterQual', 'ExterCond',
+                                             'TotalBsmtSF', 'CentralAir',
+                                             '1stFlrSF', '2ndFlrSF',
+                                             'LowQualFinSF', 'GrLivArea',
+                                             'BsmtFullBath', 'BsmtHalfBath',
+                                             'FullBath', 'HalfBath',
+                                             'BedroomAbvGr...
+                                             'BldgType', 'RoofStyle',
+                                             'Exterior1st', 'Foundation',
+                                             'Heating', 'Electrical',
+                                             'PavedDrive', 'SaleType',
+                                             'SaleCondition'],
+                                    transformer=OneHotEncoder(cols=['MSZoning',
+                                                                    'LandContour',
+                                                                    'Neighborhood',
+                                                                    'Condition1',
+                                                                    'BldgType',
+                                                                    'RoofStyle',
+                                                                    'Exterior1st',
+                                                                    'Foundation',
+                                                                    'Heating',
+                                                                    'Electrical',
+                                                                    'PavedDrive',
+                                                                    'SaleType',
+                                                                    'SaleCondition'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True)))])
+2023-07-19 07:49:25,378:INFO:Creating final display dataframe.
+2023-07-19 07:49:28,275:INFO:Setup _display_container:                     Description             Value
+0                    Session id               123
+1                        Target         SalePrice
+2                   Target type        Regression
+3           Original data shape        (1459, 53)
+4        Transformed data shape       (1459, 140)
+5   Transformed train set shape       (1021, 140)
+6    Transformed test set shape        (438, 140)
+7              Ordinal features                 1
+8              Numeric features                38
+9          Categorical features                14
+10     Rows with missing values            100.0%
+11                   Preprocess              True
+12              Imputation type            simple
+13           Numeric imputation              mean
+14       Categorical imputation              mode
+15     Maximum one-hot encoding                25
+16              Encoding method              None
+17               Fold Generator             KFold
+18                  Fold Number                10
+19                     CPU Jobs                -1
+20                      Use GPU             False
+21               Log Experiment             False
+22              Experiment Name  reg-default-name
+23                          USI              c410
+2023-07-19 07:49:29,596:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:29,599:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:30,889:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:30,892:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2023-07-19 07:49:30,896:INFO:setup() successfully completed in 49.32s...............
+2023-07-19 07:49:30,963:INFO:Initializing compare_models()
+2023-07-19 07:49:30,964:INFO:compare_models(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001308AFAA6D0>, include=['gbr', 'et', 'rf'], fold=None, round=4, cross_validation=True, sort=R2, n_select=1, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.regression.oop.RegressionExperiment object at 0x000001308AFAA6D0>, 'include': ['gbr', 'et', 'rf'], 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'R2', 'n_select': 1, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.regression.oop.RegressionExperiment'>}, exclude=None)
+2023-07-19 07:49:30,965:INFO:Checking exceptions
+2023-07-19 07:49:30,985:INFO:Preparing display monitor
+2023-07-19 07:49:31,427:INFO:Initializing Gradient Boosting Regressor
+2023-07-19 07:49:31,427:INFO:Total runtime is 8.289019266764323e-06 minutes
+2023-07-19 07:49:31,455:INFO:SubProcess create_model() called ==================================
+2023-07-19 07:49:31,457:INFO:Initializing create_model()
+2023-07-19 07:49:31,460:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001308AFAA6D0>, estimator=gbr, fold=KFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001308E56BF70>, model_only=True, return_train_score=False, kwargs={})
+2023-07-19 07:49:31,463:INFO:Checking exceptions
+2023-07-19 07:49:31,476:INFO:Importing libraries
+2023-07-19 07:49:31,478:INFO:Copying training dataset
+2023-07-19 07:49:31,543:INFO:Defining folds
+2023-07-19 07:49:31,544:INFO:Declaring metric variables
+2023-07-19 07:49:31,589:INFO:Importing untrained model
+2023-07-19 07:49:31,653:INFO:Gradient Boosting Regressor Imported successfully
+2023-07-19 07:49:31,738:INFO:Starting cross validation
+2023-07-19 07:49:31,900:INFO:Cross validating with KFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-07-19 07:50:48,445:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:231: UserWarning: Persisting input arguments took 1.43s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  fitted_transformer = self._memory_fit(
+
+2023-07-19 07:50:49,362:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:231: UserWarning: Persisting input arguments took 1.08s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  fitted_transformer = self._memory_fit(
+
+2023-07-19 07:50:52,192:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:231: UserWarning: Persisting input arguments took 1.11s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  fitted_transformer = self._memory_fit(
+
+2023-07-19 07:50:56,545:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:238: UserWarning: Persisting input arguments took 0.88s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = self._memory_transform(
+
+2023-07-19 07:51:11,143:INFO:Calculating mean and std
+2023-07-19 07:51:11,156:INFO:Creating metrics dataframe
+2023-07-19 07:51:14,087:INFO:Uploading results into container
+2023-07-19 07:51:14,092:INFO:Uploading model into container now
+2023-07-19 07:51:14,097:INFO:_master_model_container: 1
+2023-07-19 07:51:14,098:INFO:_display_container: 2
+2023-07-19 07:51:14,104:INFO:GradientBoostingRegressor(random_state=123)
+2023-07-19 07:51:14,105:INFO:create_model() successfully completed......................................
+2023-07-19 07:51:14,498:INFO:SubProcess create_model() end ==================================
+2023-07-19 07:51:14,501:INFO:Creating metrics dataframe
+2023-07-19 07:51:14,581:INFO:Initializing Extra Trees Regressor
+2023-07-19 07:51:14,583:INFO:Total runtime is 1.7192633708318075 minutes
+2023-07-19 07:51:14,631:INFO:SubProcess create_model() called ==================================
+2023-07-19 07:51:14,634:INFO:Initializing create_model()
+2023-07-19 07:51:14,636:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001308AFAA6D0>, estimator=et, fold=KFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001308E56BF70>, model_only=True, return_train_score=False, kwargs={})
+2023-07-19 07:51:14,638:INFO:Checking exceptions
+2023-07-19 07:51:14,639:INFO:Importing libraries
+2023-07-19 07:51:14,640:INFO:Copying training dataset
+2023-07-19 07:51:14,794:INFO:Defining folds
+2023-07-19 07:51:14,796:INFO:Declaring metric variables
+2023-07-19 07:51:14,827:INFO:Importing untrained model
+2023-07-19 07:51:14,885:INFO:Extra Trees Regressor Imported successfully
+2023-07-19 07:51:14,978:INFO:Starting cross validation
+2023-07-19 07:51:15,013:INFO:Cross validating with KFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-07-19 07:51:17,879:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pipeline.py:231: UserWarning: Persisting input arguments took 1.15s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  fitted_transformer = self._memory_fit(
+
+2023-07-19 07:51:42,203:INFO:Calculating mean and std
+2023-07-19 07:51:42,220:INFO:Creating metrics dataframe
+2023-07-19 07:51:45,518:INFO:Uploading results into container
+2023-07-19 07:51:45,523:INFO:Uploading model into container now
+2023-07-19 07:51:45,528:INFO:_master_model_container: 2
+2023-07-19 07:51:45,529:INFO:_display_container: 2
+2023-07-19 07:51:45,532:INFO:ExtraTreesRegressor(n_jobs=-1, random_state=123)
+2023-07-19 07:51:45,533:INFO:create_model() successfully completed......................................
+2023-07-19 07:51:45,802:INFO:SubProcess create_model() end ==================================
+2023-07-19 07:51:45,804:INFO:Creating metrics dataframe
+2023-07-19 07:51:45,899:INFO:Initializing Random Forest Regressor
+2023-07-19 07:51:45,901:INFO:Total runtime is 2.2412366231282554 minutes
+2023-07-19 07:51:45,941:INFO:SubProcess create_model() called ==================================
+2023-07-19 07:51:45,944:INFO:Initializing create_model()
+2023-07-19 07:51:45,946:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001308AFAA6D0>, estimator=rf, fold=KFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001308E56BF70>, model_only=True, return_train_score=False, kwargs={})
+2023-07-19 07:51:45,946:INFO:Checking exceptions
+2023-07-19 07:51:45,947:INFO:Importing libraries
+2023-07-19 07:51:45,948:INFO:Copying training dataset
+2023-07-19 07:51:46,030:INFO:Defining folds
+2023-07-19 07:51:46,031:INFO:Declaring metric variables
+2023-07-19 07:51:46,095:INFO:Importing untrained model
+2023-07-19 07:51:46,161:INFO:Random Forest Regressor Imported successfully
+2023-07-19 07:51:46,267:INFO:Starting cross validation
+2023-07-19 07:51:46,302:INFO:Cross validating with KFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-07-19 07:52:10,907:INFO:Calculating mean and std
+2023-07-19 07:52:10,920:INFO:Creating metrics dataframe
+2023-07-19 07:52:13,664:INFO:Uploading results into container
+2023-07-19 07:52:13,670:INFO:Uploading model into container now
+2023-07-19 07:52:13,673:INFO:_master_model_container: 3
+2023-07-19 07:52:13,673:INFO:_display_container: 2
+2023-07-19 07:52:13,675:INFO:RandomForestRegressor(n_jobs=-1, random_state=123)
+2023-07-19 07:52:13,676:INFO:create_model() successfully completed......................................
+2023-07-19 07:52:14,036:INFO:SubProcess create_model() end ==================================
+2023-07-19 07:52:14,039:INFO:Creating metrics dataframe
+2023-07-19 07:52:14,243:INFO:Initializing create_model()
+2023-07-19 07:52:14,244:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001308AFAA6D0>, estimator=GradientBoostingRegressor(random_state=123), fold=KFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2023-07-19 07:52:14,245:INFO:Checking exceptions
+2023-07-19 07:52:14,260:INFO:Importing libraries
+2023-07-19 07:52:14,260:INFO:Copying training dataset
+2023-07-19 07:52:14,343:INFO:Defining folds
+2023-07-19 07:52:14,344:INFO:Declaring metric variables
+2023-07-19 07:52:14,346:INFO:Importing untrained model
+2023-07-19 07:52:14,346:INFO:Declaring custom model
+2023-07-19 07:52:14,357:INFO:Gradient Boosting Regressor Imported successfully
+2023-07-19 07:52:14,383:INFO:Cross validation set to False
+2023-07-19 07:52:14,384:INFO:Fitting Model
+2023-07-19 07:52:18,844:INFO:GradientBoostingRegressor(random_state=123)
+2023-07-19 07:52:18,845:INFO:create_model() successfully completed......................................
+2023-07-19 07:52:19,582:INFO:_master_model_container: 3
+2023-07-19 07:52:19,583:INFO:_display_container: 2
+2023-07-19 07:52:19,587:INFO:GradientBoostingRegressor(random_state=123)
+2023-07-19 07:52:19,588:INFO:compare_models() successfully completed......................................
+2023-07-19 07:52:20,428:INFO:Initializing plot_model()
+2023-07-19 07:52:20,429:INFO:plot_model(plot=residuals, fold=None, verbose=True, display=None, display_format=None, estimator=GradientBoostingRegressor(random_state=123), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x000001308AFAA6D0>, system=True)
+2023-07-19 07:52:20,430:INFO:Checking exceptions
+2023-07-19 07:52:20,471:INFO:Preloading libraries
+2023-07-19 07:52:20,607:INFO:Copying training dataset
+2023-07-19 07:52:20,610:INFO:Plot type: residuals
+2023-07-19 07:52:23,389:INFO:Fitting Model
+2023-07-19 07:52:23,393:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but GradientBoostingRegressor was fitted with feature names
+  warnings.warn(
+
+2023-07-19 07:52:23,696:INFO:Scoring test/hold-out set
+2023-07-19 07:52:27,900:INFO:Visual Rendered Successfully
+2023-07-19 07:52:28,266:INFO:plot_model() successfully completed......................................
+2023-07-19 07:52:28,611:INFO:Initializing plot_model()
+2023-07-19 07:52:28,614:INFO:plot_model(plot=error, fold=None, verbose=True, display=None, display_format=None, estimator=GradientBoostingRegressor(random_state=123), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x000001308AFAA6D0>, system=True)
+2023-07-19 07:52:28,615:INFO:Checking exceptions
+2023-07-19 07:52:28,652:INFO:Preloading libraries
+2023-07-19 07:52:28,741:INFO:Copying training dataset
+2023-07-19 07:52:28,742:INFO:Plot type: error
+2023-07-19 07:52:30,595:INFO:Fitting Model
+2023-07-19 07:52:30,600:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but GradientBoostingRegressor was fitted with feature names
+  warnings.warn(
+
+2023-07-19 07:52:30,604:INFO:Scoring test/hold-out set
+2023-07-19 07:52:33,066:INFO:Visual Rendered Successfully
+2023-07-19 07:52:33,438:INFO:plot_model() successfully completed......................................
+2023-07-19 07:52:33,772:INFO:Initializing plot_model()
+2023-07-19 07:52:33,772:INFO:plot_model(plot=feature, fold=None, verbose=True, display=None, display_format=None, estimator=GradientBoostingRegressor(random_state=123), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x000001308AFAA6D0>, system=True)
+2023-07-19 07:52:33,773:INFO:Checking exceptions
+2023-07-19 07:52:33,822:INFO:Preloading libraries
+2023-07-19 07:52:33,945:INFO:Copying training dataset
+2023-07-19 07:52:33,945:INFO:Plot type: feature
+2023-07-19 07:52:33,947:WARNING:No coef_ found. Trying feature_importances_
+2023-07-19 07:52:36,456:INFO:Visual Rendered Successfully
+2023-07-19 07:52:36,919:INFO:plot_model() successfully completed......................................
+2023-07-19 07:52:37,616:INFO:Initializing save_model()
+2023-07-19 07:52:37,617:INFO:save_model(model=GradientBoostingRegressor(random_state=123), model_name=my_model_pipeline, prep_pipe_=Pipeline(memory=FastMemory(location=C:\Users\aditya\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['MSSubClass', 'Utilities',
+                                             'LandSlope', 'MasVnrArea',
+                                             'ExterQual', 'ExterCond',
+                                             'TotalBsmtSF', 'CentralAir',
+                                             '1stFlrSF', '2ndFlrSF',
+                                             'LowQualFinSF', 'GrLivArea',
+                                             'BsmtFullBath', 'BsmtHalfBath',
+                                             'FullBath', 'HalfBath',
+                                             'BedroomAbvGr...
+                                             'BldgType', 'RoofStyle',
+                                             'Exterior1st', 'Foundation',
+                                             'Heating', 'Electrical',
+                                             'PavedDrive', 'SaleType',
+                                             'SaleCondition'],
+                                    transformer=OneHotEncoder(cols=['MSZoning',
+                                                                    'LandContour',
+                                                                    'Neighborhood',
+                                                                    'Condition1',
+                                                                    'BldgType',
+                                                                    'RoofStyle',
+                                                                    'Exterior1st',
+                                                                    'Foundation',
+                                                                    'Heating',
+                                                                    'Electrical',
+                                                                    'PavedDrive',
+                                                                    'SaleType',
+                                                                    'SaleCondition'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True)))]), verbose=True, use_case=MLUsecase.REGRESSION, kwargs={})
+2023-07-19 07:52:37,617:INFO:Adding model into prep_pipe
+2023-07-19 07:52:37,877:INFO:my_model_pipeline.pkl saved in current working directory
+2023-07-19 07:52:38,130:INFO:Pipeline(memory=FastMemory(location=C:\Users\aditya\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['MSSubClass', 'Utilities',
+                                             'LandSlope', 'MasVnrArea',
+                                             'ExterQual', 'ExterCond',
+                                             'TotalBsmtSF', 'CentralAir',
+                                             '1stFlrSF', '2ndFlrSF',
+                                             'LowQualFinSF', 'GrLivArea',
+                                             'BsmtFullBath', 'BsmtHalfBath',
+                                             'FullBath', 'HalfBath',
+                                             'BedroomAbvGr...
+                                             'PavedDrive', 'SaleType',
+                                             'SaleCondition'],
+                                    transformer=OneHotEncoder(cols=['MSZoning',
+                                                                    'LandContour',
+                                                                    'Neighborhood',
+                                                                    'Condition1',
+                                                                    'BldgType',
+                                                                    'RoofStyle',
+                                                                    'Exterior1st',
+                                                                    'Foundation',
+                                                                    'Heating',
+                                                                    'Electrical',
+                                                                    'PavedDrive',
+                                                                    'SaleType',
+                                                                    'SaleCondition'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('trained_model', GradientBoostingRegressor(random_state=123))])
+2023-07-19 07:52:38,133:INFO:save_model() successfully completed......................................
+2023-07-19 07:52:39,880:INFO:Initializing load_model()
+2023-07-19 07:52:39,881:INFO:load_model(model_name=my_model_pipeline, platform=None, authentication=None, verbose=True)
+2023-07-19 07:52:42,221:INFO:Soft dependency imported: gradio: 3.37.0
+2023-07-19 07:52:42,249:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,252:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,252:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `numeric` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,269:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,270:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,284:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,286:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,300:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,301:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,302:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,303:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,304:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `numeric` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,321:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,323:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,338:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,341:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,373:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,379:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,392:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,397:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,414:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,416:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,416:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,417:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,417:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `numeric` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,436:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,438:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,442:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,444:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,446:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `numeric` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,463:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,464:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,466:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,467:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,467:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `numeric` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,484:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,486:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,486:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,488:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,488:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `numeric` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,620:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,621:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,623:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,623:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,627:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `numeric` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,649:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,650:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,661:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,662:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5418: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Dropdown(list(self.X[i].unique()), label=i))
+
+2023-07-19 07:52:42,664:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,665:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `optional` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
+2023-07-19 07:52:42,665:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `numeric` parameter is deprecated, and it has no effect
+  all_inputs.append(gr.inputs.Textbox(label=i))
+
