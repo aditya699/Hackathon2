@@ -87,3 +87,6 @@ Link to Docker Image - https://drive.google.com/file/d/1h86zn6Mo7a6mNr4e__DkGGk9
 ## 🚀 About Me
 A motivated Data Scientist with a proven track record of success in leveraging data analytics and business insights to drive strategic decisions. Experienced in developing and implementing data-driven strategies that maximize ROI. Skilled in using advanced analytics to identify opportunities for growth and efficiency. Currently working as a Business Analyst at NeenOpal, formerly a Data Scientist at Ineuron.ai & Analytics Vidhya, and an alumnus of IIIT Hyderabad & Delhi University.
 
+# Accuracy 
+
+The model upon running gives an accuracy of about 83-85%
