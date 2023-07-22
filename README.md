@@ -1,6 +1,11 @@
 
 # House Price Prediction Problem
 
+# Technical Architecture
+
+![Technical Architecture (2)](https://github.com/aditya699/PYTHON_PROJECTS/assets/64576351/ccfdae5e-7456-440b-afe8-f3b0a64980af)
+
+
 # Wireframe
 
 ![Wireframe](https://github.com/aditya699/ZAMATO-DATA-SCIENCE-PROJECT/assets/64576351/7244ca0c-bf1e-4bcf-825e-995bd165d055)
