@@ -11401,3 +11401,7 @@ Alternately, you can install this by running `pip install pycaret[models]`
 2023-07-19 07:52:42,665:WARNING:c:\Users\aditya\anaconda3\envs\hack2\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:5420: GradioDeprecationWarning: `numeric` parameter is deprecated, and it has no effect
   all_inputs.append(gr.inputs.Textbox(label=i))
 
+2023-07-19 08:06:05,604:INFO:Initializing interpret_model()
+2023-07-19 08:06:08,434:INFO:interpret_model(estimator=GradientBoostingRegressor(random_state=123), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=None, kwargs={}, observation=None, plot=summary, save=False, self=<pycaret.regression.oop.RegressionExperiment object at 0x000001308AFAA6D0>)
+2023-07-19 08:06:08,435:INFO:Checking exceptions
+2023-07-19 08:06:09,185:INFO:Soft dependency imported: shap: 0.42.1
